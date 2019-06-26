@@ -1,0 +1,40 @@
+* {
+
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    font-family: Georgia, Times, "Times New Roman", serif;
+    font-size: 16px;
+    line-height: 24px;
+    background: url("https://image.freepik.com/free-vector/cartoon-duck-background_75906-14.jpg");
+}
+
+h1 {
+    margin: 50px;
+    text-align: center;
+    font-size: 70px;
+    line-height: 50px;
+    font-family: 'Concert One', cursive;
+    color: black; 
+}
+
+.container {
+    text-align: center;
+    margin: 10% 20%;
+    padding: 10px;
+    background: lightgoldenrodyellow;
+    border: 2px solid black;
+}
+
+.main-content {
+   padding: 10% 0;
+}
+
+.btn {
+    padding: 15px 75px;
+    font-size: 20px;
+    background: lightcyan;
+    border: 2px solid black;
+}
