@@ -141,7 +141,7 @@ $("#start").on("click", function() {
   
 
     // Submit button
-    $("#submit").html("<button id='done' class='btn'>Done</button>");
+    $("#submit").html("<button id='done' class='btn'>Submit</button>");
 
     // Click event runs keepingScore() and displayResults() when user clicks Done button
     $("#done").on("click", function() {
