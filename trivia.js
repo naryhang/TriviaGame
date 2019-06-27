@@ -1,3 +1,5 @@
+
+//amount of seconds 
 var number = 120;
 
 var intervalId;
@@ -6,7 +8,7 @@ var correctAnswers = 0;
 var incorrectAnswers = 0;
 var unanswered = 0;
 
-// Questions array
+// Questions and answers array
 var questions = [{
     question: "Why do female ducks often have subdued and more neutral color feathers:",
     answerList: ["they ugly", "their feathers are lighter so they can fly further for food", "to camouflage when they are in their nests", "the Russians did it"],
@@ -55,7 +57,7 @@ $("#start").on("click", function() {
     // Hide Start button
     $(this).hide();
 
-    // Display initial time countdown
+    // Display time countdown
     $("#time").html("<h2>Time Remaining: 120 Seconds</h2>" + "<br>");
 
     // Start timer countdown
@@ -147,7 +149,7 @@ $("#start").on("click", function() {
     // Keeping track of score based on correct, incorrect, and unanswered
     keepingScore();
 
-    // Display 
+    // Display results
     displayResults();
         
     });
@@ -163,7 +165,7 @@ function run() {
 
 function decrement() {
 
-    //  Decrease number by one.
+    //  Decrease number by one second.
     number--;
 
     //  Show the number in the #time tag
@@ -189,6 +191,7 @@ function stop() {
 // Function used for displaying results in terms of correct, incorrect, and unanswered.
 function displayResults() {
 
+    // hide time, questions and answers 
     $("#time").hide();
     $("#question1").hide();
     $("#answer1").hide();
@@ -211,8 +214,9 @@ function displayResults() {
     $("#question10").hide();
     $("#answer10").hide();
     $("#submit").hide();
-
-    $("#resultsMessage").html("<h3>All Done!</h3>");
+    
+    // show results of correctAnswers, incorrectAnswers and unanswered.
+    $("#resultsMessage").html("<h3>Done!</h3>");
     $("#correct").html("Correct Answers: " + correctAnswers);
     $("#incorrect").html("Incorrect Answers: " + incorrectAnswers);
     $("#unanswered").html("Unanswered: " + unanswered);
@@ -232,7 +236,7 @@ function keepingScore() {
     var userAnswer9 = $("input[name='answer9']:checked").val();
     var userAnswer10 = $("input[name='answer10']:checked").val();
     
-
+    
     // Question 1
     if (userAnswer1 === undefined) {
 
